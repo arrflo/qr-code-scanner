@@ -1,0 +1,11 @@
+Scanned QR code results: 
+ 
+FOR CONTACT TRACING
+Name: Romalyn Floranda 
+Sex: Female 
+Age: 19 
+Address: #123-Z Jansatabitabi st., Sumwer-in, Quezon City, PH 1234 
+Email: mail.me@gmail.com 
+Phone Number: +639XXXX56789 
+ 
+data recorded at 2022-02-16 17:46:27.943605
