@@ -28,23 +28,24 @@ while True:
         rd = data
         #create a txt file
         with open ("qrcodescannedresults.txt", 'a') as file:
-            file.write(f'Scanned QR code results: {rd}')
-            file.write('data recorded at' (datetime.datetime.now()))
+            file.write(f'Scanned QR code results:')
+            file.write(f'{rd}')
+            file.write('data recorded at %s.' %(datetime.datetime.now()))
         break
     for barcode in decode(img):
-        rd = data
         txt = barcode.data.decode ('utf-8')
         print(txt)
         lne= np.array ([barcode.polygon], np.int32)
         lne = lne.reshape ((-1,1,2))
         cv2.polylines(img, [lne], True, (230, 67, 107),5 )
         with open("qrcodescannedresults.txt", 'a') as file:
-            file.write(f'Scanned QR code results: {rd}')
-            file.write('data recorded at' (datetime.datetime.now()))
+            file.write(f'Scanned QR code results: \n \n')
+            file.write(f'{txt} \n \n')
+            file.write('data recorded at %s' %(datetime.datetime.now()))
             webcam.release (txt)
             cv2.destroyAllWindows
         break
-    cv2.imshow('QR Code Scanner here!', img)
+    cv2.imshow('QRCODE SCANNER', img)
     if cv2.waitKey(1) == ord('a'):
         break
 
